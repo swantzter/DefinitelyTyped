@@ -93,7 +93,7 @@ declare module 'util' {
         numericSeparator?: boolean | undefined;
     }
     export type Style = 'special' | 'number' | 'bigint' | 'boolean' | 'undefined' | 'null' | 'string' | 'symbol' | 'date' | 'regexp' | 'module';
-    export type CustomInspectFunction = (depth: number, options: InspectOptionsStylized) => any; // TODO: , inspect: inspect
+    export type CustomInspectFunction = (depth: number, options: InspectOptionsStylized, inspect: typeof inspect) => any;
     export interface InspectOptionsStylized extends InspectOptions {
         stylize(text: string, styleType: Style): string;
     }
